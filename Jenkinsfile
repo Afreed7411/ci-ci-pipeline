@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Test') {
+    steps {
+        bat 'npm test'
+    }
+       }
+
         stage('Build Docker Image') {
             steps {
                 bat 'docker build --no-cache -t vite-app .'
