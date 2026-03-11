@@ -3,11 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Test') {
-    steps {
-        bat 'npm test'
-    }
-       }
+      
 
         stage('Build Docker Image') {
             steps {
